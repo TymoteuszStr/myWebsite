@@ -4,9 +4,12 @@ const showMobileNav = () =>{
     const mobileNav = document.querySelector('.navigation__menu-list');
     const navLinks = document.querySelectorAll('.navigation__menu-list--link');
 
+
     burger.addEventListener('click', ()=>{
+        //show mobileNav
         mobileNav.classList.toggle('mobileNavActive');
 
+        // animate only link
         navLinks.forEach((link,index)=>{
             if(link.style.animation){
                 link.style.animation = '';
@@ -20,6 +23,7 @@ const showMobileNav = () =>{
 
 }
 
+// move greetings 
 const hello = () => {
     const hi = document.querySelector('.greeting--hi');
     const tym = document.querySelector('.greeting__wrap');
@@ -29,10 +33,36 @@ const hello = () => {
 
 }
 
+const showTopNav = () =>{
+
+    const navTopBar = document.querySelector('.navigation');
+
+    window.addEventListener('scroll', ()=>{
+
+        if( window.innerWidth > 768){
+
+            if(window.pageYOffset>window.innerHeight*0.8){
+                navTopBar.style.position = 'fixed';
+                navTopBar.style.background = "rgba(55, 58, 61, 0.9)";
+                navTopBar.style.animation = 'topNavBarShow 0.5s ease-in';
+    
+            }
+            else{
+                navTopBar.style.position = 'absolute';
+                navTopBar.style.background = "rgba(55, 58, 61, 0.4)";
+                navTopBar.style.animation = '';
+    
+            }
+        }
+    });
+
+}
+
 
 const allFunction = () =>{
     hello();
     showMobileNav();
+    showTopNav();
 }
 
 allFunction();
