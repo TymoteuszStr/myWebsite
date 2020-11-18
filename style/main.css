@@ -74,7 +74,7 @@
 
 @media screen and (max-width: 768px) {
   body {
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .navigation .navigation__menu-list {
     z-index: 5;
@@ -113,26 +113,26 @@
 
 @-webkit-keyframes mobileNavLinkFade {
   from {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(-3rem);
+            transform: translateX(-3rem);
     opacity: 0;
   }
   to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
     opacity: 1;
   }
 }
 
 @keyframes mobileNavLinkFade {
   from {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(-3rem);
+            transform: translateX(-3rem);
     opacity: 0;
   }
   to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
     opacity: 1;
   }
 }
@@ -181,7 +181,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0;
-  opacity: .8;
+  opacity: .6;
 }
 
 .greeting {
@@ -251,16 +251,6 @@
   width: 100%;
   height: 100vh;
   padding-top: 3rem;
-}
-
-.about-me__wrap {
-  margin-top: auto;
-  border: 5px ridge #5dc0b8;
-  padding: 30px 20px;
-  max-width: 60vw;
-  min-height: 50vh;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .app {

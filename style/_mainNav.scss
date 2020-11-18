@@ -73,7 +73,7 @@
 @media screen and (max-width:768px){
 
     body{
-        overflow: hidden;
+        overflow-x: hidden;
     }
   
     .navigation{
@@ -112,11 +112,11 @@
 @keyframes mobileNavLinkFade {
 
     from{
-        transform: translateX(100%); 
+        transform: translateX(-3rem); 
         opacity: 0;
     }
     to{
-        transform: translateX(0); 
+        transform: translateY(3rem); 
         opacity: 1;
 
     }
