@@ -68,11 +68,12 @@
 
 @media screen and (max-width: 768px) {
   .navigation .navigation__menu-list {
+    z-index: 5;
     position: absolute;
     right: 0;
     top: 3rem;
-    height: 60vh;
-    width: 50vw;
+    height: 50vh;
+    width: 100vw;
     background: rgba(55, 58, 61, 0.95);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -125,6 +126,116 @@
             transform: translateX(0);
     opacity: 1;
   }
+}
+
+.photo-wrap {
+  background: #303030;
+  height: 46.5vw;
+}
+
+.main-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 0;
+  height: 100vh;
+  width: 100%;
+  height: 100%;
+  background: url(../img/me.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  opacity: .8;
+}
+
+.greeting {
+  position: absolute;
+  bottom: 15%;
+  left: 3vw;
+  color: white;
+  font-family: 'Teko', sans-serif;
+  font-size: 5rem;
+}
+
+.greeting--hi {
+  display: block;
+  letter-spacing: 2px;
+  height: 5rem;
+  -webkit-transform: translateY(-100vh);
+          transform: translateY(-100vh);
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+.greeting__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Black Ops One', cursive;
+  height: 5rem;
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+.greeting__wrap--tym {
+  color: #5dc0b8;
+  display: block;
+}
+
+@media screen and (max-width: 1048px) {
+  .greeting {
+    font-size: 3rem;
+  }
+  .greeting--hi {
+    height: 3rem;
+  }
+  .greeting__wrap {
+    height: 3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .greeting {
+    font-size: 2rem;
+  }
+  .greeting--hi {
+    height: 2rem;
+  }
+  .greeting__wrap {
+    height: 2rem;
+  }
+  .photo-wrap {
+    height: 356px;
+  }
+}
+
+.about-me {
+  width: 100%;
+  height: 100vh;
+  padding-top: 3rem;
+}
+
+.about-me__wrap {
+  margin-top: auto;
+  border: 5px ridge #5dc0b8;
+  padding: 30px 20px;
+  max-width: 60vw;
+  min-height: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  padding: 0;
 }
 
 *, *::before, *::after {

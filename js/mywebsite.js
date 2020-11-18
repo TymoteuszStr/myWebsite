@@ -18,14 +18,20 @@ const showMobileNav = () =>{
         });
     });
 
-   
+}
 
+const hello = () => {
+    const hi = document.querySelector('.greeting--hi');
+    const tym = document.querySelector('.greeting__wrap');
+
+    hi.style.transform = 'translateX(0)';
+    tym.style.transform = 'translateX(0)';
 
 }
 
 
-
 const allFunction = () =>{
+    hello();
     showMobileNav();
 }
 
