@@ -1,0 +1,142 @@
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(55, 58, 61, 0.6);
+  min-height: 3rem;
+  font-family: 'Teko', sans-serif;
+}
+
+.navigation__menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navigation__menu-list li {
+  list-style: none;
+}
+
+.navigation__menu-list--link {
+  text-decoration: none;
+  color: #5dc0b8;
+  letter-spacing: 2px;
+  margin-right: 3vw;
+}
+
+.navigation__menu-list--link:hover, .navigation__menu-list--link:focus {
+  color: #b9f7f1;
+}
+
+.navigation .logo {
+  font-family: 'Black Ops One', cursive;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #5dc0b8;
+  margin-left: 3vw;
+  opacity: 1;
+  letter-spacing: 2px;
+}
+
+.navigation .burger div {
+  background-color: #5dc0b8;
+  width: 22px;
+  height: 3px;
+  margin: 5px;
+}
+
+.navigation .burger {
+  display: none;
+  margin-right: 3vw;
+}
+
+.navigation .burger:hover {
+  cursor: pointer;
+}
+
+.navigation .burger:hover div {
+  background-color: #b9f7f1;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation .navigation__menu-list {
+    position: absolute;
+    right: 0;
+    top: 3rem;
+    height: 60vh;
+    width: 50vw;
+    background: rgba(55, 58, 61, 0.95);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    transition: -webkit-transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+  }
+  .navigation .navigation__menu-list--link {
+    opacity: 0;
+  }
+  .navigation .burger {
+    display: block;
+  }
+}
+
+.navigation .mobileNavActive {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+@-webkit-keyframes mobileNavLinkFade {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes mobileNavLinkFade {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/*# sourceMappingURL=main.css.map */
