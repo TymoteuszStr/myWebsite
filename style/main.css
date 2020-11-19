@@ -249,11 +249,11 @@
 
 .about-me {
   width: 100%;
-  height: 100vh;
   padding-top: 3rem;
+  min-height: 100vh;
 }
 
-.app {
+.my-app {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,6 +272,7 @@
   background: white;
   padding: 0;
   margin: 0;
+  background: white;
 }
 
 .my-skills .category-title {
@@ -282,6 +283,7 @@
   font-family: 'Teko', sans-serif;
   font-size: 2rem;
   margin-top: 3vh;
+  color: #303030;
 }
 
 .my-skills .skills-list-wrapper {

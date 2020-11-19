@@ -36,12 +36,13 @@ const hello = () => {
 const showTopNav = () =>{
 
     const navTopBar = document.querySelector('.navigation');
+    const mainPhoto = document.querySelector('.main-photo');
 
     window.addEventListener('scroll', ()=>{
 
         if( window.innerWidth > 768){
 
-            if(window.pageYOffset>window.innerHeight*0.8){
+            if(window.pageYOffset>window.innerHeight*0.3){
                 navTopBar.style.position = 'fixed';
                 navTopBar.style.background = "rgba(55, 58, 61, 0.9)";
                 navTopBar.style.animation = 'topNavBarShow 0.5s ease-in';
@@ -57,6 +58,53 @@ const showTopNav = () =>{
     });
 
 }
+
+function setLinkColor(){
+    const navLinks = document.querySelectorAll('.navigation__menu-list--link');
+    navLinks.forEach((link)=>{
+        link.style.color='#5dc0b8';
+    });
+}
+
+const highlightNav = () =>{
+
+    const mainPhoto = document.querySelector('.main-photo');
+    const aboutMe = document.querySelector('.about-me');
+    const myApp = document.querySelector('.my-app');
+    const mySkills = document.querySelector('.my-skills');
+    const footer = document.querySelector('.footer');
+    const navLink = document.querySelectorAll('.navigation__menu-list--link');
+
+
+
+    window.addEventListener('scroll', ()=>{
+    var scrollY = window.pageYOffset;
+
+    if( ((aboutMe.offsetTop - scrollY)/aboutMe.offsetHeight) < 0.4 &&
+        ((aboutMe.offsetTop - scrollY)/aboutMe.offsetHeight) > -0.4 ) {
+            navLink[0].style.color='#b9f7f1'; 
+        }
+    else if( ((myApp.offsetTop - scrollY)/myApp.offsetHeight) < 0.4 &&
+    ((myApp.offsetTop - scrollY)/myApp.offsetHeight) > -0.4 ){
+         navLink[1].style.color='#b9f7f1';
+
+    }
+    else if( ((mySkills.offsetTop - scrollY)/mySkills.offsetHeight) < 0.4 &&
+    ((mySkills.offsetTop - scrollY)/mySkills.offsetHeight) > -0.4 ){
+        navLink[2].style.color='#b9f7f1';
+    }
+    else{
+        setLinkColor();
+
+    }
+
+            
+            
+     });
+
+
+}
+
 
 function drawGraph(){
     const canvas=document.querySelector('#skillsGraph');
@@ -123,6 +171,7 @@ const allFunction = () =>{
     showMobileNav();
     showTopNav();
     canvasSkillsGraph();
+    highlightNav();
 }
 
 allFunction();
