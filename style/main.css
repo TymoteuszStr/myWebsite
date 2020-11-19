@@ -57,6 +57,8 @@
   width: 22px;
   height: 3px;
   margin: 5px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .navigation .burger {
@@ -157,6 +159,20 @@
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+}
+
+.toggleNavBtn .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggleNavBtn .line2 {
+  opacity: 0;
+}
+
+.toggleNavBtn .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .photo-wrap {

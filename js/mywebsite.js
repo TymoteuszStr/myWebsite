@@ -19,6 +19,10 @@ const showMobileNav = () =>{
             }
 
         });
+
+         // animate burger
+         burger.classList.toggle('toggleNavBtn'); 
+
     });
 
 }
