@@ -25,10 +25,22 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navigation__menu-list li {
   list-style: none;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+.navigation__menu-list li:hover, .navigation__menu-list li:focus {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .navigation__menu-list--link {
@@ -37,10 +49,6 @@
   letter-spacing: 1px;
   margin-right: 3vw;
   font-size: 1.2rem;
-}
-
-.navigation__menu-list--link:hover, .navigation__menu-list--link:focus {
-  color: #b9f7f1;
 }
 
 .navigation .logo {
@@ -77,6 +85,11 @@
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
+  }
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
   }
   .navigation .navigation__menu-list {
     z-index: 5;

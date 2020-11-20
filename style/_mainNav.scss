@@ -15,10 +15,17 @@
     &__menu-list{
         display: flex;
         justify-content: space-around;
-    
+        align-items: center;
+         
 
         li{
             list-style: none;
+            transition: transform .3s ease;
+
+
+            &:hover,&:focus{
+                transform: translateY(-5px);
+            }
 
         }
 
@@ -31,7 +38,7 @@
 
            
            &:hover,&:focus{
-                color:$hover-color;
+               // color:$hover-color;
             }
         }
         
@@ -78,6 +85,9 @@
     }
   
     .navigation{
+        position: fixed;
+        top:0;
+        left: 0;
 
         .navigation__menu-list{
             z-index: 5;

@@ -48,11 +48,10 @@ const showTopNav = () =>{
 
     window.addEventListener('scroll', ()=>{
 
-        if( window.innerWidth > 768){
 
             if(window.pageYOffset>window.innerHeight*0.4){
                 navTopBar.style.position = 'fixed';
-                navTopBar.style.background = "rgba(55, 58, 61, 0.9)";
+                navTopBar.style.background = "rgba(55, 58, 61, 0.95)";
                 navTopBar.style.animation = 'topNavBarShow 0.5s ease-in';
     
             }
@@ -62,7 +61,7 @@ const showTopNav = () =>{
                 navTopBar.style.animation = '';
     
             }
-        }
+       
     });
 
 }
