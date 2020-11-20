@@ -8,14 +8,18 @@ const showMobileNav = () =>{
     burger.addEventListener('click', ()=>{
         //show mobileNav
         mobileNav.classList.toggle('mobileNavActive');
+        if(mobileNav.classList.contains('mobileNavActive')) mobileNav.classList.remove('mobileNotNavActive');
+        else  mobileNav.classList.add('mobileNotNavActive');
 
+       
+    
         // animate only link
         navLinks.forEach((link,index)=>{
             if(link.style.animation){
                 link.style.animation = '';
             }
             else{
-            link.style.animation=`mobileNavLinkFade 0.5s ease forwards ${index/5 + 0.3}s`;
+            link.style.animation=`mobileNavLinkFade 0.5s ease forwards ${index/6 + 0.2}s`;
             }
 
         });
@@ -46,7 +50,7 @@ const showTopNav = () =>{
 
         if( window.innerWidth > 768){
 
-            if(window.pageYOffset>window.innerHeight*0.3){
+            if(window.pageYOffset>window.innerHeight*0.4){
                 navTopBar.style.position = 'fixed';
                 navTopBar.style.background = "rgba(55, 58, 61, 0.9)";
                 navTopBar.style.animation = 'topNavBarShow 0.5s ease-in';
@@ -62,6 +66,8 @@ const showTopNav = () =>{
     });
 
 }
+
+
 
 function setLinkColor(){
     const navLinks = document.querySelectorAll('.navigation__menu-list--link');

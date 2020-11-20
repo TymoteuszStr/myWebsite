@@ -83,7 +83,6 @@
     position: absolute;
     right: 0;
     top: 3rem;
-    height: calc(356px - 2.5rem);
     width: 100vw;
     background: rgba(55, 58, 61, 0.95);
     -webkit-box-orient: vertical;
@@ -93,12 +92,8 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: -webkit-transform .5s ease-in-out;
-    transition: -webkit-transform .5s ease-in-out;
-    transition: transform .5s ease-in-out;
-    transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+    height: 0;
+    display: none;
   }
   .navigation .navigation__menu-list--link {
     opacity: 0;
@@ -109,40 +104,81 @@
 }
 
 .navigation .mobileNavActive {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(356px - 2.5rem);
+  -webkit-animation: mobileNavBarShow 0.3s ease-in;
+          animation: mobileNavBarShow 0.3s ease-in;
+}
+
+.navigation .mobileNotNavActive {
+  -webkit-animation: mobileNavBarHide 0.3s ease-in;
+          animation: mobileNavBarHide 0.3s ease-in;
+  height: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @-webkit-keyframes mobileNavLinkFade {
   from {
-    -webkit-transform: translateX(-3rem);
-            transform: translateX(-3rem);
     opacity: 0;
   }
   to {
-    -webkit-transform: translateY(3rem);
-            transform: translateY(3rem);
     opacity: 1;
   }
 }
 
 @keyframes mobileNavLinkFade {
   from {
-    -webkit-transform: translateX(-3rem);
-            transform: translateX(-3rem);
     opacity: 0;
   }
   to {
-    -webkit-transform: translateY(3rem);
-            transform: translateY(3rem);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes mobileNavBarShow {
+  from {
+    height: 0;
+  }
+  to {
+    height: calc(356px - 2.5rem);
+  }
+}
+
+@keyframes mobileNavBarShow {
+  from {
+    height: 0;
+  }
+  to {
+    height: calc(356px - 2.5rem);
+  }
+}
+
+@-webkit-keyframes mobileNavBarHide {
+  from {
+    height: calc(356px - 2.5rem);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes mobileNavBarHide {
+  from {
+    height: calc(356px - 2.5rem);
+  }
+  to {
+    height: 0;
   }
 }
 
 @-webkit-keyframes topNavBarShow {
   from {
-    -webkit-transform: translateY(-4rem);
-            transform: translateY(-4rem);
+    -webkit-transform: translateY(-3rem);
+            transform: translateY(-3rem);
   }
   to {
     -webkit-transform: translateY(0);
@@ -152,8 +188,8 @@
 
 @keyframes topNavBarShow {
   from {
-    -webkit-transform: translateY(-4rem);
-            transform: translateY(-4rem);
+    -webkit-transform: translateY(-3rem);
+            transform: translateY(-3rem);
   }
   to {
     -webkit-transform: translateY(0);
