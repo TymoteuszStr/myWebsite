@@ -3,12 +3,12 @@
     justify-content: space-between;
     align-items: center;
     background: $bg-color-rgba03;
-    min-height: 3rem;
     font-family:  'Teko', sans-serif;
     position: absolute;
     top:0;
     left:0;
-    min-height: 3rem;
+    min-height: $logo-font-size;
+    padding: 2px 0;
     width: 100%;
     z-index: $zOnTop;
 
@@ -24,7 +24,7 @@
 
 
             &:hover,&:focus{
-                transform: translateY(-5px);
+                transform: translateY(-3px);
             }
 
         }
@@ -34,7 +34,7 @@
             color: $font-color;
             letter-spacing: 1px;
             margin-right: 3vw;
-            font-size: 1.2rem;
+            font-size: $nav-font-size;
 
            
            &:hover,&:focus{
@@ -46,7 +46,7 @@
 
     .logo{
         font-family: 'Black Ops One', cursive;
-        font-size: 1.8rem;
+        font-size: $logo-font-size;
         text-decoration: none;
         color: $font-color;
         margin-left: 3vw;

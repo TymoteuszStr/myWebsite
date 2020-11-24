@@ -41,28 +41,21 @@ const hello = () => {
 
 }
 
+
 const showTopNav = () =>{
 
     const navTopBar = document.querySelector('.navigation');
-    const mainPhoto = document.querySelector('.main-photo');
-
-    window.addEventListener('scroll', ()=>{
-
-
-            if(window.pageYOffset>window.innerHeight*0.4){
-                navTopBar.style.position = 'fixed';
-                navTopBar.style.background = "rgba(55, 58, 61, 0.95)";
-                navTopBar.style.animation = 'topNavBarShow 0.5s ease-in';
     
-            }
-            else{
-                navTopBar.style.position = 'absolute';
-                navTopBar.style.background = "rgba(55, 58, 61, 0.4)";
-                navTopBar.style.animation = '';
-    
-            }
-       
-    });
+    if(scrollY>window.innerHeight*0.4){
+        navTopBar.style.position = 'fixed';
+        navTopBar.style.background = "rgba(55, 58, 61, 0.95)";
+        navTopBar.style.animation  = 'topNavBarShow 0.5s ease-in'; 
+    }
+    else{
+        navTopBar.style.position = 'absolute';
+        navTopBar.style.background = "rgba(55, 58, 61, 0.4)";
+        navTopBar.style.animation = '';
+    }
 
 }
 
@@ -86,8 +79,7 @@ const highlightNav = () =>{
 
 
 
-    window.addEventListener('scroll', ()=>{
-    var scrollY = window.pageYOffset;
+    window.addEventListener('scroll', _.debounce(()=>{
 
     if( ((aboutMe.offsetTop - scrollY)/aboutMe.offsetHeight) < 0.4 &&
         ((aboutMe.offsetTop - scrollY)/aboutMe.offsetHeight) > -0.4 ) {
@@ -105,18 +97,16 @@ const highlightNav = () =>{
     else{
         setLinkColor();
 
-    }
-
+    }     
             
-            
-     });
+     },500));
 
 
 }
 
 
-function drawGraph(){
-    const canvas=document.querySelector('#skillsGraph');
+const drawGraph = ()=>{
+    const canvas = document.querySelector('#skillsGraph');
     const context = canvas.getContext("2d");
     
     canvas.height= window.innerHeight;
@@ -127,18 +117,15 @@ function drawGraph(){
     const size = window.innerWidth/8;
 
     context.beginPath();
-    context.lineTo(p[0].x*size, p[0].y*size);
-    context.lineTo(p[1].x*size, p[1].y*size);
-    context.lineTo(p[2].x*size, p[2].y*size);
-    context.lineTo(p[3].x*size, p[3].y*size);
-    context.lineTo(p[4].x*size, p[4].y*size);
-    context.lineTo(p[5].x*size, p[5].y*size);
+	p.forEach(({x,y})=>{
+        context.lineTo(x*size,y*size);
+    });
     context.closePath();
     context.fillStyle='rgba(93, 192, 184, 0.4)';
     context.fill();
     context.strokeStyle='rgba(93, 192, 184)';
     context.stroke();
-
+    // DO NAPRAWY ! jedna funkcja robi wsztstko !
     context.beginPath();
     context.lineTo(p[0].x*size, p[0].y*size + 50);
     context.lineTo(p[1].x*size-10, p[1].y*size + 10);
@@ -178,9 +165,15 @@ const canvasSkillsGraph = () =>{
 const allFunction = () =>{
     hello();
     showMobileNav();
-    showTopNav();
+    //showTopNav();
     canvasSkillsGraph();
     highlightNav();
 }
+
+window.addEventListener('scroll', ()=>{
+
+    showTopNav();
+
+});
 
 allFunction();

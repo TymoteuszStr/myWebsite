@@ -9,12 +9,12 @@
       -ms-flex-align: center;
           align-items: center;
   background: rgba(55, 58, 61, 0.4);
-  min-height: 3rem;
   font-family: 'Teko', sans-serif;
   position: absolute;
   top: 0;
   left: 0;
   min-height: 3rem;
+  padding: 2px 0;
   width: 100%;
   z-index: 10;
 }
@@ -39,8 +39,8 @@
 }
 
 .navigation__menu-list li:hover, .navigation__menu-list li:focus {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 
 .navigation__menu-list--link {
@@ -48,12 +48,12 @@
   color: #5dc0b8;
   letter-spacing: 1px;
   margin-right: 3vw;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 
 .navigation .logo {
   font-family: 'Black Ops One', cursive;
-  font-size: 1.8rem;
+  font-size: 3rem;
   text-decoration: none;
   color: #5dc0b8;
   margin-left: 3vw;
@@ -425,5 +425,6 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 /*# sourceMappingURL=main.css.map */
