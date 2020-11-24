@@ -38,8 +38,8 @@
                 margin-top:3vh;
                 display: flex;
                 flex-direction: row;
-                border: 1px solid $my-grey;
-                font-size: 1.5rem;
+                //border: 1px solid $my-grey;
+                font-size: 2rem;
                 width: 35vw;
                 padding: 5px 10px;
                 justify-content: center;
@@ -63,7 +63,6 @@
 
     .graph-wrapper{
         padding-top: 3rem;
-
         .skills-graph{
             position: relative;
             top: 0;

@@ -1,17 +1,15 @@
 import {canvas} from './domSelector';
 
 // needed variables
-const size = window.innerWidth/8;
 const fillHexColor= 'rgba(93, 192, 184, 0.4)';
 const strokeHexColor ='rgba(93, 192, 184)';
 const fillSubHexColor = 'rgba(63, 162, 154, 0.4)';
 const strokeSubHexColor = 'rgba(63, 162, 154,1)';
 const rad3 = Math.pow(3,0.5);
 const basePoints = [ {x:2, y:0.5}, {x:2+rad3/2, y:1}, {x:2+rad3/2, y:2}, {x:2, y:2.5}, {x:2-rad3/2,  y:2}, {x:2-rad3/2, y:1} ];
-const skillLvl = [9,6,8,7,5,7];
 const maxLvl = 10;
-
-
+const size = window.innerWidth/8;     //naprawić -> aby się skalowało razem ze zmianią rozmiaru okna
+const skillLvl = [9,6,8,7,5,7];     // finalnie tu będzie zmienna tablica w zależności od wybranych skilli
 
 const drawHex = (points,fillColor,strokeColor,ctx) =>{
 
@@ -19,10 +17,9 @@ const drawHex = (points,fillColor,strokeColor,ctx) =>{
     points.forEach(({x,y})=>{
         ctx.lineTo(x*size,y*size);
     });
-
     ctx.closePath();
     ctx.fillStyle=fillColor;
-    ctx.fill();
+    ctx.fill()
     ctx.strokeStyle=strokeColor;
     ctx.stroke();
 }
@@ -45,49 +42,25 @@ const translateXY = (lvl,index) => {
 }
 
 export const createNewSubPoints= (baseHexPoints,lvl) =>{
-   const newSubHexPoints = [];
-
+    const newSubHexPoints = [];
 
     baseHexPoints.forEach(({x,y},index) =>{
-    const {xt,yt} = translateXY(lvl[index],index);
-
-        newSubHexPoints.push({
-            x:x+xt,
-            y:y+yt
-        });
+        const {xt,yt} = translateXY(lvl[index],index);
+        newSubHexPoints.push({ x:x+xt, y:y+yt });
     });
-
     return newSubHexPoints;
 }
 
 export const drawHexagons = ()=>{
-    //set the context and size of canvas
-    const context = canvas.getContext("2d");
     canvas.height= window.innerHeight;
     canvas.width = window.innerWidth/2-10;
-
-    drawHex(basePoints,fillHexColor,strokeHexColor,context);
-
+    const context = canvas.getContext("2d");
     const subHexPoints = createNewSubPoints(basePoints,skillLvl);
 
+    drawHex(basePoints,fillHexColor,strokeHexColor,context);
     drawHex(subHexPoints,fillSubHexColor,strokeSubHexColor,context);
-    console.log(subHexPoints);
-
-
-
-     context.fillStyle = 'black';
-     context.font = "20px 'Teko', sans-serif";
-   
+    context.fillStyle = 'black';
+    context.font = "20px 'Teko', sans-serif";
 }
 
 
-const canvasSkillsGraph = () =>{
-    window.addEventListener('load',()=>{
-        drawGraph();
-    });
-
-    window.addEventListener('resize',()=>{
-        drawGraph();
-    });
-
-}

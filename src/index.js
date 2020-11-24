@@ -13,4 +13,10 @@ const runFuncions = () =>{
     drawHexagons();
 }
 
+
+window.addEventListener('resize',()=>{
+    drawHexagons();
+});
+
+
 runFuncions();

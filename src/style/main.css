@@ -384,8 +384,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border: 1px solid #303030;
-  font-size: 1.5rem;
+  font-size: 2rem;
   width: 35vw;
   padding: 5px 10px;
   -webkit-box-pack: center;
