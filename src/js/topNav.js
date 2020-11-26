@@ -1,7 +1,7 @@
 import {aboutMe,myApp,mySkills,footer,navTopLinks,navigationTop} from './domSelector';
 
-const normalColor ='#5dc0b8';
-const lightColor = '#b9f7f1';
+const normalColor ='#37a59c';
+const lightColor = '#72ddd1';
 
 const setDefaultLinkColor = ()=>{
     navTopLinks.forEach(({style})=>{

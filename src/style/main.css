@@ -13,8 +13,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  min-height: 3rem;
-  padding: 2px 0;
+  height: 4.2rem;
   width: 100%;
   z-index: 10;
 }
@@ -45,7 +44,7 @@
 
 .navigation__menu-list--link {
   text-decoration: none;
-  color: #5dc0b8;
+  color: #45c7bc;
   letter-spacing: 1px;
   margin-right: 3vw;
   font-size: 1.8rem;
@@ -55,13 +54,13 @@
   font-family: 'Black Ops One', cursive;
   font-size: 3rem;
   text-decoration: none;
-  color: #5dc0b8;
+  color: #45c7bc;
   margin-left: 3vw;
   letter-spacing: 2px;
 }
 
 .navigation .burger div {
-  background-color: #5dc0b8;
+  background-color: #45c7bc;
   width: 22px;
   height: 3px;
   margin: 5px;
@@ -79,7 +78,7 @@
 }
 
 .navigation .burger:hover div {
-  background-color: #b9f7f1;
+  background-color: #72ddd1;
 }
 
 @media screen and (max-width: 768px) {
@@ -281,7 +280,7 @@
 }
 
 .greeting__wrap--tym {
-  color: #5dc0b8;
+  color: #45c7bc;
   display: block;
 }
 
@@ -332,35 +331,123 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: white;
   padding: 0;
   margin: 0;
-  background: white;
 }
 
-.my-skills .category-title {
+.my-skills .skill-category-list {
+  margin-top: 4.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  font-family: 'Teko', sans-serif;
+}
+
+.my-skills .skill-category-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  border-bottom: 1px solid #303030;
+  border-left: 1px solid #303030;
+  border-top: 1px solid #303030;
+  color: #303030;
+  min-width: 25%;
+  min-height: 10vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2.1rem;
+  letter-spacing: 1px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.my-skills .skill-category-list__item:first-child {
+  border-left: none;
+}
+
+.my-skills .skill-category-list__item:hover, .my-skills .skill-category-list__item :active {
+  color: #45c7bc;
+  cursor: pointer;
+}
+
+.my-skills .skills-demo-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  min-height: 80%;
+}
+
+.my-skills .skills-demo-wrapper .skills-demo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.my-skills .skills-demo-wrapper .skills-demo__category-title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   top: 0;
   left: 0;
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3vh 0;
+}
+
+.my-skills .skills-demo-wrapper .skills-demo__category-title-wrapper .category-title {
   font-family: 'Teko', sans-serif;
-  font-size: 2rem;
-  margin-top: 3vh;
+  font-size: 3rem;
   color: #303030;
 }
 
-.my-skills .skills-list-wrapper {
-  position: relative;
-  top: 0;
-  left: 0;
-  min-height: 100vh;
-  width: 50%;
-  padding-top: 3rem;
+.my-skills .skills-demo-wrapper .skills-demo__category-title-wrapper .line {
+  width: 35px;
+  height: 2px;
+  background-color: #303030;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.my-skills .skills-list-wrapper .skills-list {
+.my-skills .skills-demo-wrapper .skills-demo__skills-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -371,12 +458,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5vw;
 }
 
-.my-skills .skills-list-wrapper .skills-list__item {
-  margin-top: 3vh;
+.my-skills .skills-demo-wrapper .skills-demo__skills-list__item {
+  margin-bottom: 3vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -385,32 +474,64 @@
       -ms-flex-direction: row;
           flex-direction: row;
   font-size: 2rem;
-  width: 35vw;
-  padding: 5px 10px;
+  width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #5dc0b8;
+  color: #45c7bc;
 }
 
-.my-skills .skills-list-wrapper .skills-list__item--name {
+.my-skills .skills-demo-wrapper .skills-demo__skills-list__item--name {
   font-family: 'Teko', sans-serif;
   color: #303030;
-  width: 9vw;
   text-align: center;
+  min-width: 20%;
+  text-align: end;
+  margin-right: 10px;
 }
 
-.my-skills .graph-wrapper {
-  padding-top: 3rem;
+.my-skills .skills-demo-wrapper .skills-demo__skills-list__item--stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  min-width: 40%;
 }
 
-.my-skills .graph-wrapper .skills-graph {
-  position: relative;
-  top: 0;
-  left: 0;
+.my-skills .skills-demo-wrapper .skills-demo__arrow {
+  margin: 8vh 0;
+  color: #45c7bc;
+  font-size: 2.5rem;
+  font-family: 'Teko', sans-serif;
+}
+
+.my-skills .skills-demo-wrapper .skills-demo__arrow:hover {
+  color: #72ddd1;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .my-skills .skill-category__list {
+    width: 100%;
+  }
+  .my-skills .skill-category__list__item {
+    letter-spacing: 0;
+    font-size: 2rem;
+  }
+  .my-skills .skills-demo-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .my-skills .skills-demo-wrapper .skills-demo {
+    width: 100%;
+  }
 }
 
 *, *::before, *::after {

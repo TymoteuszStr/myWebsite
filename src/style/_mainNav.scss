@@ -7,8 +7,7 @@
     position: absolute;
     top:0;
     left:0;
-    min-height: $logo-font-size;
-    padding: 2px 0;
+    height: $nav-bar-size;
     width: 100%;
     z-index: $zOnTop;
 
@@ -16,6 +15,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+
          
 
         li{
@@ -35,11 +35,6 @@
             letter-spacing: 1px;
             margin-right: 3vw;
             font-size: $nav-font-size;
-
-           
-           &:hover,&:focus{
-               // color:$hover-color;
-            }
         }
         
     }
@@ -50,7 +45,8 @@
         text-decoration: none;
         color: $font-color;
         margin-left: 3vw;
-        letter-spacing: 2px;  
+        letter-spacing: 2px; 
+ 
     }
 
     .burger div{

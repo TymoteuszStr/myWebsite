@@ -10,5 +10,6 @@
     export const mySkills = document.querySelector('.my-skills');
     export const footer = document.querySelector('.footer');
     export const canvas =document.querySelector('#skillsGraph');
-
+    export const skillsDemo = document.querySelector('.skills-demo');
+    export const skillCategoryListItem = document.querySelectorAll('.skill-category-list__item');
     
