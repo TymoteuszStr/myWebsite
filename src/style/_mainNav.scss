@@ -15,7 +15,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-
+        padding:0 10vw;
          
 
         li{
@@ -33,7 +33,7 @@
             text-decoration: none;
             color: $font-color;
             letter-spacing: 1px;
-            margin-right: 3vw;
+            margin:0 1.5vw;
             font-size: $nav-font-size;
         }
         
@@ -89,14 +89,13 @@
             z-index: 5;
             position: absolute;
             right: 0;
-            top: 3rem;
+            top: $nav-bar-size;
             width: 100vw;
             background: $bg-color-rgba09;
             flex-direction: column;
             align-items: center;
             height: 0;
             display: none;
-            // transition: transform .4s ease-in;
             
             &--link{
                 opacity: 0;
@@ -116,7 +115,7 @@
 
     .mobileNavActive{
        display: flex;
-       height:calc(356px - 2.5rem);
+       height: $mobile-nav-size;
        animation:mobileNavBarShow 0.3s ease-in;
     }
 
@@ -147,13 +146,13 @@
     }
 
     to{
-        height: calc(356px - 2.5rem);
+        height: $mobile-nav-size;
     }
 }
 
 @keyframes mobileNavBarHide{
     from{
-        height:calc(356px - 2.5rem); 
+        height: $mobile-nav-size; 
     }
 
     to{

@@ -27,6 +27,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 10vw;
 }
 
 .navigation__menu-list li {
@@ -44,9 +45,9 @@
 
 .navigation__menu-list--link {
   text-decoration: none;
-  color: #45c7bc;
+  color: #37a59c;
   letter-spacing: 1px;
-  margin-right: 3vw;
+  margin: 0 1.5vw;
   font-size: 1.8rem;
 }
 
@@ -54,13 +55,13 @@
   font-family: 'Black Ops One', cursive;
   font-size: 3rem;
   text-decoration: none;
-  color: #45c7bc;
+  color: #37a59c;
   margin-left: 3vw;
   letter-spacing: 2px;
 }
 
 .navigation .burger div {
-  background-color: #45c7bc;
+  background-color: #37a59c;
   width: 22px;
   height: 3px;
   margin: 5px;
@@ -94,7 +95,7 @@
     z-index: 5;
     position: absolute;
     right: 0;
-    top: 3rem;
+    top: 4.2rem;
     width: 100vw;
     background: rgba(55, 58, 61, 0.95);
     -webkit-box-orient: vertical;
@@ -119,7 +120,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: calc(356px - 2.5rem);
+  height: 315px;
   -webkit-animation: mobileNavBarShow 0.3s ease-in;
           animation: mobileNavBarShow 0.3s ease-in;
 }
@@ -156,7 +157,7 @@
     height: 0;
   }
   to {
-    height: calc(356px - 2.5rem);
+    height: 315px;
   }
 }
 
@@ -165,13 +166,13 @@
     height: 0;
   }
   to {
-    height: calc(356px - 2.5rem);
+    height: 315px;
   }
 }
 
 @-webkit-keyframes mobileNavBarHide {
   from {
-    height: calc(356px - 2.5rem);
+    height: 315px;
   }
   to {
     height: 0;
@@ -180,7 +181,7 @@
 
 @keyframes mobileNavBarHide {
   from {
-    height: calc(356px - 2.5rem);
+    height: 315px;
   }
   to {
     height: 0;
@@ -280,7 +281,7 @@
 }
 
 .greeting__wrap--tym {
-  color: #45c7bc;
+  color: #37a59c;
   display: block;
 }
 
@@ -385,7 +386,7 @@
 }
 
 .my-skills .skill-category-list__item:hover, .my-skills .skill-category-list__item :active {
-  color: #45c7bc;
+  color: #37a59c;
   cursor: pointer;
 }
 
@@ -481,7 +482,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #45c7bc;
+  color: #37a59c;
 }
 
 .my-skills .skills-demo-wrapper .skills-demo__skills-list__item--name {
@@ -505,7 +506,7 @@
 
 .my-skills .skills-demo-wrapper .skills-demo__arrow {
   margin: 8vh 0;
-  color: #45c7bc;
+  color: #37a59c;
   font-size: 2.5rem;
   font-family: 'Teko', sans-serif;
 }

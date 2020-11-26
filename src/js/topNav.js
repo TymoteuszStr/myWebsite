@@ -16,16 +16,10 @@ export const highlightNav = () =>{
             setDefaultLinkColor();
             navTopLinks[0].style.color=lightColor; 
         }
-    else if( ((myApp.offsetTop - scrollY)/myApp.offsetHeight) < 0.4 &&
-             ((myApp.offsetTop - scrollY)/myApp.offsetHeight) > -0.4 ){
-        setDefaultLinkColor();
-         navTopLinks[1].style.color=lightColor;
-
-    }
     else if( ((mySkills.offsetTop - scrollY)/mySkills.offsetHeight) < 0.4 &&
              ((mySkills.offsetTop - scrollY)/mySkills.offsetHeight) > -0.4 ){
         setDefaultLinkColor();
-        navTopLinks[2].style.color=lightColor;
+        navTopLinks[1].style.color=lightColor;
     }
     else{
         setDefaultLinkColor();
