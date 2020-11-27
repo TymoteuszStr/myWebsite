@@ -4,6 +4,7 @@ import {showMobileNav} from './js/mobileNav';
 import {scrollFunctions} from './js/scroll';
 import {drawHexagons} from './js/canvas';
 import {chooseCategory} from './js/chooseCategory';
+import {setStars} from './js/setStars';
 
 
 
@@ -13,6 +14,8 @@ const runFuncions = () =>{
     scrollFunctions();
     drawHexagons();
     chooseCategory();
+    setStars();
+
 }
 
 

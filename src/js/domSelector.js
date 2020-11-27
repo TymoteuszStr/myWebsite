@@ -12,4 +12,4 @@
     export const canvas =document.querySelector('#skillsGraph');
     export const skillsDemo = document.querySelector('.skills-demo');
     export const skillCategoryListItem = document.querySelectorAll('.skill-category-list__item');
-    
+    export const skillsList = document.querySelector('.skills-demo__skills-list');

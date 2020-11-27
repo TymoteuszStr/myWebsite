@@ -1,4 +1,5 @@
 import {canvas,skillsDemo} from './domSelector';
+import {programinLang, tools, foreinLang, other} from './skillsList';
 
 // needed variables
 const fillHexColor= 'rgba(93, 192, 184, 0.4)';

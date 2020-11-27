@@ -2,7 +2,6 @@ import {skillCategoryListItem}from './domSelector';
 
 const resetCategoryBg = () =>{
 
-    const border = '1px solid $my-grey';
     skillCategoryListItem.forEach(({style})=>{
             style.background = '#fff';
          })
