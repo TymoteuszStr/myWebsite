@@ -1,0 +1,20 @@
+@import "./var";
+@import "./mainNav";
+@import "./mainPhoto";
+@import "./aboutMe";
+@import "./app";
+@import "./mySkills";
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin:0;
+    padding: 0;
+
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}

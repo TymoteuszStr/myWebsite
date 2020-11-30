@@ -1,15 +1,38 @@
 
-export const skillsStarList = [
-    {js:6, css:7, html:8, cpp:5, php:2, es:5},
-    {sass:7, git:6, bootstrap:5, weback:5, unittest:4, mysql:2},
-    {eng: 7, ger:3},
-    {oop:6, cleancode: 6, bem:4, db:5}
+export const skillSetList = [
+    [
+        {name:'JavaScript', lvl:6},
+        {name:'CSS', lvl:7},
+        {name:'HTML', lvl:8},
+        {name:'C++', lvl:5},
+        {name:'PHP', lvl:2},
+        {name:'ECMAScript', lvl:5}
+    ],
+    [
+        {name:'SASS ', lvl:7},
+        {name:'GIT', lvl:6},
+        {name:'Bootstrap', lvl:5},
+        {name:'Webpack', lvl:5},
+        {name:'Testy jednostkowe: ', lvl:4},
+        {name:'MySQL', lvl:3}
+    ],
+    [
+        {name:'Język angielski', lvl:7},
+        {name:'Język Niemiecki', lvl:3}
+    ],
+    [
+        {name:'OPP: ', lvl:7},
+        {name:'"Czysty kod"', lvl:6},
+        {name:'Metodologia BEM', lvl:4},
+        {name:'Bazy danych', lvl:5}
+    ]
 ];
 
-export const skillsNameList = [
-    {js:'JavaScript', css:'CSS', html:'HTML', cpp:'C++', php:'PHP', es:'ECMAScript'},
-    {sass:'SASS', git:'GIT', bootstrap:'Bootstrap', weback:'Webpack', unittest:'Testy jednostkowe', mysql:'MySQL'},
-    {eng: 'Język angielski', ger:'Język Niemiecki'},
-    {oop:'OPP', cleancode: '"Czysty kod"', bem:'Metodologia BEM', db:'Bazy danych'}
+export let skillsChecked = [
+    [0,0,0,0,0,0,],
+    [0,0,0,0,0,0,],
+    [0,0],
+    [0,0,0,0]
 ];
-
+export let categoryChecked = 0;
+export let checkedCounter = 0;

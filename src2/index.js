@@ -4,8 +4,8 @@ import {showMobileNav} from './js/mobileNav';
 import {scrollFunctions} from './js/scroll';
 import {drawHexagons} from './js/canvas';
 import {chooseCategory} from './js/chooseCategory';
-import {chooseSkills} from './js/chooseSkills'
-import { resetGrapt } from './js/generateNewGraph';
+import {setStars} from  './js/setStars';
+
 
 
 const runFuncions = () =>{
@@ -14,8 +14,8 @@ const runFuncions = () =>{
     scrollFunctions();
     drawHexagons();
     chooseCategory();
-    chooseSkills();
-    resetGrapt();
+    setStars();
+
 }
 
 

@@ -1,7 +1,4 @@
 import {skillCategoryListItem}from './domSelector';
-import {setStars} from './setStars';
-import { categoryChecked } from './skillsList';
-
 
 const resetCategoryBg = () =>{
 
@@ -11,12 +8,12 @@ const resetCategoryBg = () =>{
 }
 
 export const chooseCategory = () =>{
-    skillCategoryListItem.forEach((btn,index)=>{
-        btn.addEventListener('click', ()=>{
+
+
+    skillCategoryListItem.forEach((btn)=>{
+       btn.addEventListener('click', ()=>{
            resetCategoryBg();
-           categoryChecked = index;
            btn.style.background= '#72ddd1';
-           setStars();
         })
     })
     

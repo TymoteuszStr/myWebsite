@@ -1,0 +1,188 @@
+.navigation{
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    background: $bg-color-rgba03;
+    font-family:  'Teko', sans-serif;
+    position: absolute;
+    top:0;
+    left:0;
+    height: $nav-bar-size;
+    width: 100%;
+    z-index: $zOnTop;
+
+    &__menu-list{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+         
+
+        li{
+            list-style: none;
+            transition: transform .3s ease;
+
+
+            &:hover,&:focus{
+                transform: translateY(-3px);
+            }
+
+        }
+
+        &--link{
+            text-decoration: none;
+            color: $font-color;
+            letter-spacing: 1px;
+            margin-right: 3vw;
+            font-size: $nav-font-size;
+        }
+        
+    }
+
+    .logo{
+        font-family: 'Black Ops One', cursive;
+        font-size: $logo-font-size;
+        text-decoration: none;
+        color: $font-color;
+        margin-left: 3vw;
+        letter-spacing: 2px; 
+ 
+    }
+
+    .burger div{
+        background-color: $font-color;
+        width: 22px;
+        height: 3px;
+        margin:5px;
+        transition: all .3s ease;
+
+        
+    }
+    .burger{
+       display: none;
+       margin-right: 3vw;
+
+       &:hover{
+           cursor: pointer;
+
+           div{
+              background-color: $hover-color;
+           }
+
+       }
+    }
+
+}
+
+@media screen and (max-width:768px){
+
+    body{
+        overflow-x: hidden;
+    }
+  
+    .navigation{
+        position: fixed;
+        top:0;
+        left: 0;
+
+        .navigation__menu-list{
+            z-index: 5;
+            position: absolute;
+            right: 0;
+            top: 3rem;
+            width: 100vw;
+            background: $bg-color-rgba09;
+            flex-direction: column;
+            align-items: center;
+            height: 0;
+            display: none;
+            // transition: transform .4s ease-in;
+            
+            &--link{
+                opacity: 0;
+
+            }
+
+        }
+
+        .burger{
+            display: block;
+         }
+    }
+}
+ 
+//toggle mobile navigation class
+.navigation {
+
+    .mobileNavActive{
+       display: flex;
+       height:calc(356px - 2.5rem);
+       animation:mobileNavBarShow 0.3s ease-in;
+    }
+
+    .mobileNotNavActive{
+
+        animation: mobileNavBarHide 0.3s ease-in;
+        height: 0;
+        display: flex;
+ 
+     }
+   
+}
+
+
+@keyframes mobileNavLinkFade {
+
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+
+}
+@keyframes mobileNavBarShow{
+    from{
+        height:0; 
+    }
+
+    to{
+        height: calc(356px - 2.5rem);
+    }
+}
+
+@keyframes mobileNavBarHide{
+    from{
+        height:calc(356px - 2.5rem); 
+    }
+
+    to{
+       height: 0;
+    }
+}
+
+@keyframes topNavBarShow{
+    from{
+        transform: translateY(-3rem); 
+    }
+
+    to{
+        transform: translateY(0); 
+    }
+}
+
+.toggleNavBtn{
+    
+    .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+    }
+
+    .line2{
+        opacity: 0;
+    }
+
+    .line3{
+        transform: rotate(45deg) translate(-5px,-6px);
+    }
+
+}
