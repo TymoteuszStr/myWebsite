@@ -8,7 +8,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: rgba(55, 58, 61, 0.4);
+  background: rgba(55, 58, 61, 0.2);
   font-family: 'Teko', sans-serif;
   position: absolute;
   top: 0;
@@ -313,10 +313,75 @@
 }
 
 .about-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding-top: 3rem;
   min-height: 100vh;
-  background: #a5c5c0;
+  font-family: 'Teko', sans-serif;
+  background: #adc7c613;
+}
+
+.about-me__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #303030;
+  width: 35vw;
+  border: 1px solid black;
+  height: 80vh;
+  margin-top: 4.2rem;
+}
+
+.about-me__text h5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 4rem;
+  margin-left: 5vw;
+}
+
+.about-me__photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-top: 4.2rem;
+  top: 0;
+  left: 0;
+  width: 475px;
+  height: 600px;
+}
+
+.about-me__photo .photo2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url(../img/me2.jpg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 93%;
+  height: 95%;
+  z-index: 5;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-me__photo .bg-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 4px dashed #37a59c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 95%;
+  height: 95%;
+  z-index: 1;
 }
 
 .my-app {

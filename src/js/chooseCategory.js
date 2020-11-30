@@ -15,7 +15,7 @@ export const chooseCategory = () =>{
         btn.addEventListener('click', ()=>{
            resetCategoryBg();
            categoryChecked = index;
-           btn.style.background= '#72ddd1';
+           btn.style.background= '#37a59c';
            setStars();
         })
     })
