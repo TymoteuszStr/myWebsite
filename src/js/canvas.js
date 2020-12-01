@@ -4,7 +4,7 @@ import {canvas,skillsDemo} from './domSelector';
 const context = canvas.getContext("2d");
 const fillHexColor= 'rgba(93, 192, 184, 0.4)';
 const strokeHexColor ='rgba(93, 192, 184)';
-const fillSubHexColor = 'rgba(63, 162, 154, 0.4)';
+const fillSubHexColor = 'rgba(55, 165, 156, 0.6)';
 const strokeSubHexColor = 'rgba(63, 162, 154,1)';
 const rad3 = Math.pow(3,0.5);
 const basePoints = [ {x:2, y:0.5}, {x:2+rad3/2, y:1}, {x:2+rad3/2, y:2}, {x:2, y:2.5}, {x:2-rad3/2,  y:2}, {x:2-rad3/2, y:1} ];
