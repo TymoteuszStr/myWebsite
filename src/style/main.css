@@ -529,6 +529,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 5vw;
+  width: 100%;
 }
 
 .my-skills .skills-demo-wrapper .skills-demo__skills-list__item {
@@ -541,13 +542,9 @@
       -ms-flex-direction: row;
           flex-direction: row;
   font-size: 2rem;
-<<<<<<< HEAD
   width: 55%;
   margin-right: auto;
   margin-left: auto;
-=======
-  width: 100%;
->>>>>>> parent of f8b8eba (finished my skill section)
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -557,15 +554,17 @@
   color: #37a59c;
 }
 
+.my-skills .skills-demo-wrapper .skills-demo__skills-list__item:hover {
+  cursor: pointer;
+  color: #72ddd1;
+  letter-spacing: 1px;
+}
+
 .my-skills .skills-demo-wrapper .skills-demo__skills-list__item--name {
   font-family: 'Teko', sans-serif;
   color: #303030;
   text-align: center;
-<<<<<<< HEAD
   min-width: 25%;
-=======
-  min-width: 20%;
->>>>>>> parent of f8b8eba (finished my skill section)
   text-align: end;
   margin-right: 10px;
 }
@@ -602,7 +601,6 @@
   margin-right: 4px;
 }
 
-<<<<<<< HEAD
 .my-skills .skills-demo-wrapper .skills-demo__reset .refresh-icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -622,8 +620,6 @@
   letter-spacing: 1px;
 }
 
-=======
->>>>>>> parent of f8b8eba (finished my skill section)
 @media screen and (max-width: 768px) {
   .my-skills .skill-category__list {
     width: 100%;
@@ -643,7 +639,6 @@
   }
 }
 
-<<<<<<< HEAD
 @media screen and (max-width: 1200px) {
   .my-skills .skills-demo-wrapper .skills-demo__skills-list__item {
     width: 90%;
@@ -717,8 +712,6 @@
   text-align: center;
 }
 
-=======
->>>>>>> parent of f8b8eba (finished my skill section)
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

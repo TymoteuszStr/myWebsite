@@ -86,51 +86,74 @@
                 align-items: center;
                 justify-content: center;
                 margin-top:5vw;
+                width: 100%;
 
                 &__item{
                     margin-bottom:3vh;
                     display: flex;
                     flex-direction: row;
                     font-size: 2rem;
-                    width: 100%;
+                    width: 55%;
+                    margin-right: auto;
+                    margin-left: auto;
                     justify-content: center;    
                     align-items: center;    
                     color: $font-color;
-
-                    
+                    &:hover{
+                        cursor: pointer;
+                        color: $hover-color;
+                        letter-spacing: 1px;
+                    }          
                     &--name{
                         font-family:  'Teko', sans-serif;
                         color: $my-grey;
                         text-align: center;
-                        min-width: 20%;
+                        min-width: 25%;
                         text-align: end;
                         margin-right: 10px;
                      }
                      &--stars{
                          display: flex;
                          justify-content: space-around;
+                         overflow: hidden;
                          text-align: center;
                          min-width: 40%;
                      }
                  }
             }
             
-            &__arrow{
-                margin: 8vh 0;
+            &__reset{
+                display: flex;
+                align-items: center;
+                margin: 5vh 0;
                 color:$font-color;
-                font-size: 2.5rem;
                 font-family: 'Teko', sans-serif;
+                min-height: 4rem;
+
                 
+                &--string{ 
+                    display: flex;
+                    font-size: 2.8rem;
+                    margin-right: 4px;
+                }
+                .refresh-icon{
+                    display: flex;
+                    font-size: 2.1rem;
+                    padding-bottom: 4px;
+                }
                 &:hover{
                     color:$hover-color;
                     cursor: pointer;
                 }
-            }
-
-           
+            }           
             
         }
     }    
+}
+.item-checked{
+    border: 1px solid #303030;
+    color: $hover-color !important;
+    letter-spacing: 1px;
 }
 
 @media screen and (max-width:768px){
@@ -150,9 +173,28 @@
 
             .skills-demo{    
                 width: 100%;
+            
             } 
         }
     }
        
      
 }
+@media screen and (max-width:1200px){
+    .my-skills{
+        .skills-demo-wrapper{
+            .skills-demo{    
+                &__skills-list{
+
+                    &__item{
+                        width: 90%;
+                        &--name{
+                            width: 30%;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
