@@ -7,6 +7,7 @@ const resetCategoryBg = () =>{
 
     skillCategoryListItem.forEach(({style})=>{
             style.background = '#fff';
+            
          })
 }
 

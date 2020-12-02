@@ -134,7 +134,7 @@
   display: flex;
 }
 
-@-webkit-keyframes mobileNavLinkFade {
+@-webkit-keyframes showAnim {
   from {
     opacity: 0;
   }
@@ -143,12 +143,30 @@
   }
 }
 
-@keyframes mobileNavLinkFade {
+@keyframes showAnim {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes hideAnim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hideAnim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 
@@ -387,7 +405,6 @@
   .about-me .text-wrapper .main-text {
     width: 70vw;
     letter-spacing: 0;
-    text-align: justify;
   }
 }
 
@@ -449,7 +466,7 @@
 }
 
 .my-skills .skill-category-list__item:hover, .my-skills .skill-category-list__item :active {
-  color: #37a59c;
+  color: #72ddd1;
   cursor: pointer;
 }
 
@@ -623,7 +640,7 @@
   }
   .my-skills .skill-category__list__item {
     letter-spacing: 0;
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
   .my-skills .skills-demo-wrapper {
     -webkit-box-orient: vertical;
@@ -633,6 +650,16 @@
   }
   .my-skills .skills-demo-wrapper .skills-demo {
     width: 100%;
+  }
+  .my-skills .skills-demo-wrapper .skills-demo__category-title-wrapper {
+    margin-top: 5vh;
+  }
+  .my-skills .skills-demo-wrapper .skills-demo__skills-list__item--name {
+    min-width: 15%;
+  }
+  .my-skills .skills-demo-wrapper .skills-demo__reset {
+    margin-top: 5vh;
+    margin-bottom: 0;
   }
 }
 
@@ -667,7 +694,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 16%;
+  width: 150px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -709,6 +736,39 @@
   text-align: center;
 }
 
+.up-arrow {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 60px;
+  bottom: 60px;
+  z-index: 10;
+  color: #37a59c;
+  font-size: 50px;
+  display: none;
+  -webkit-animation: showAnim 1s ease-in;
+          animation: showAnim 1s ease-in;
+  opacity: .8;
+}
+
+.up-arrow:hover {
+  color: #72ddd1;
+  cursor: pointer;
+  font-size: 51px;
+}
+
+@media screen and (max-width: 768px) {
+  .up-arrow {
+    right: 20px;
+    bottom: 20px;
+    font-size: 40px;
+    opacity: 0.6;
+  }
+  .up-arrow:hover {
+    font-size: 41px;
+  }
+}
+
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -722,16 +782,5 @@ html {
   scroll-behavior: smooth;
   font-size: 62.5%;
   background-color: rgba(55, 58, 61, 0.6);
-}
-
-.up-arrow {
-  height: 100px;
-  width: 100px;
-  position: fixed;
-  top: 250px;
-  left: 250px;
-  z-index: 10;
-  color: #37a59c;
-  font-size: 4rem;
 }
 /*# sourceMappingURL=main.css.map */

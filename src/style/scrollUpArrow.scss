@@ -1,0 +1,36 @@
+.up-arrow{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 60px;
+    bottom: 60px;
+    z-index: $zOnTop;
+    color: $font-color;
+    font-size: 50px;
+    display: none;
+    animation: showAnim 1s ease-in;
+    opacity: .8;
+
+        &:hover{
+            color:$hover-color;
+            cursor: pointer;
+            font-size: 51px;
+        }
+}
+
+
+
+@media screen and (max-width:768px){
+    
+    .up-arrow{
+        right: 20px;
+        bottom: 20px;
+        font-size: 40px;
+        opacity: 0.6;
+        &:hover{
+            font-size: 41px;
+        }
+    }
+        
+   
+}

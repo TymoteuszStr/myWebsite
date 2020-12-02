@@ -21,10 +21,13 @@ export const highlightNav = () =>{
         setDefaultLinkColor();
         navTopLinks[1].style.color=lightColor;
     }
+    else if(scrollY>mySkills.offsetTop+mySkills.offsetHeight/3){
+        setDefaultLinkColor();
+        navTopLinks[2].style.color=lightColor;
+    }
     else{
         setDefaultLinkColor();
     }     
-
 }
 
 
