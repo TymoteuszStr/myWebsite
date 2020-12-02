@@ -2,7 +2,6 @@
 @import "./mainNav";
 @import "./mainPhoto";
 @import "./aboutMe";
-@import "./app";
 @import "./mySkills";
 @import "./footer";
 
@@ -18,4 +17,24 @@
 html{
     scroll-behavior: smooth;
     font-size: 62.5%;
+    background-color: $bg-color-rgba06;
+}
+
+.up-arrow{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 60px;
+    bottom: 80px;
+    z-index: $zOnTop;
+    color: $font-color;
+    font-size: 50px;
+    display: none;
+    animation: showAnim 1s ease-in;
+
+        &:hover{
+            color:$hover-color;
+            cursor: pointer;
+            font-size: 51px;
+        }
 }

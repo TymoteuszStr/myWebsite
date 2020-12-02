@@ -14,7 +14,7 @@ export const showMobileNav = () =>{
         // animate only link
         navTopLinks.forEach(({style},index)=>{
             style.animation ? style.animation = '' :
-            style.animation = `mobileNavLinkFade 0.5s ease forwards ${index/6 + 0.2}s`;
+            style.animation = `showAnim 0.5s ease forwards ${index/6 + 0.2}s`;
         });
     });
 

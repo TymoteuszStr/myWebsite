@@ -51,7 +51,7 @@ const setSkillsStars = (parentDiv,lvl) => {
     childDiv.classList.add(divClassStar);
      for(let i=0;i<10;i++){
         const starDiv = document.createElement('div');
-        starDiv.style.animation = `mobileNavLinkFade 1s ease forwards ${i/20 + 0.1}s`;
+        starDiv.style.animation = `showAnim 1s ease forwards ${i/20 + 0.1}s`;
         childDiv.appendChild(starDiv);
         const className = (i<lvl)? fullStar : emptyStar;
         starDiv.classList.add(className);

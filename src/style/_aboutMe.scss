@@ -5,56 +5,69 @@
     padding-top: 3rem; 
     min-height: 100vh;
     font-family:  'Teko', sans-serif;
-    background: $bg-color-rgba09;
+    background:whitesmoke;
 
-    &__text{
+
+    .text-wrapper{
         display: flex;
-        color:$my-grey;
-        width: 35vw;
-        border: 1px solid black;
-        height: 80vh;
-        margin-top: $nav-bar-size;
+        flex-direction: column;
 
-        h5{
+        .title{
             display: flex;
-            font-size: 4rem;
-            margin-left: 5vw;
+            justify-content: flex-start;
+            margin-top: $nav-bar-size;
+            &--bg{
+                position: absolute;
+                display: flex;
+                width: 110px;
+                height: 90px;
+                background-color: $font-color;
+                z-index: $zBehind;
+            }
+            &__text{
+                display: flex;
+                color:  $my-grey;
+                font-size: 5rem;
+                z-index: $zMid;    
+                margin-left: 20px; 
+                text-align: right; 
+                letter-spacing: 2px;
+            }
         }
+        .main-text{
+            display: flex;
+            color:  $my-grey;
+            font-size: 2.3rem;
+            width: 35vw;
+            min-height: 50vh;
+            text-align: left;
+            letter-spacing: 1px;
+            margin-top:$nav-bar-size;            
+        }
+    
     }
-
     &__photo{
-        display: flex;
-        position: relative;
+        margin-top:auto;
+        margin-bottom:auto;
         margin-top:$nav-bar-size;
-        top: 0;
-        left: 0;
-        width: 420px;
-        height: 560px;
-
-        .photo2{
-            display: flex;
-            background: url(../img/me2.jpg);
-            position: absolute;
-            //border: 4px solid $font-color;
-            top:0;
-            right: 0;
-            width: 93%;
-            height: 95%;
-            z-index: $zMid;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        .bg-photo{
-            display: flex;
-            border: 4px dashed  $font-color;
-            position: absolute;
-            bottom:0;
-            left: 0;
-            width: 95%;
-            height: 95%;
-            z-index: $zBehind;
-        }
+        scale: 0.9;
     }
 }
 
 
+@media screen and (max-width:1024px){
+    .about-me__photo{
+        display: none;
+    }
+
+    .about-me{
+        .text-wrapper{
+           .main-text{
+                width: 70vw;
+                letter-spacing: 0;
+                text-align: justify;
+            }
+        }
+    }
+
+}

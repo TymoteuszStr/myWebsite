@@ -14,3 +14,4 @@
     export const skillCategoryListItem = document.querySelectorAll('.skill-category-list__item');
     export const skillsList = document.querySelector('.skills-demo__skills-list');
     export const resetGraphButton = document.querySelector('.skills-demo__reset');
+    export const upArrow = document.querySelector('.up-arrow');
