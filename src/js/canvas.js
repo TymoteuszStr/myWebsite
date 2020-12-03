@@ -11,6 +11,7 @@ const basePoints = [ {x:2, y:0.3}, {x:2+rad3/2, y:0.8}, {x:2+rad3/2, y:1.8}, {x:
 const maxLvl = 10;
 let skillsLvl = [0,0,0,0,0,0]; 
 let skillTitle = ['','','','','',''];
+let fontStyle= "20px 'Teko', sans-serif";
 
 
 const drawHex = (points,fillColor,strokeColor,ctx,size) =>{
@@ -55,6 +56,7 @@ export const createNewSubPoints= (baseHexPoints,lvl) =>{
 
 export const drawHexagons = ()=>{
     const width = skillsDemo.offsetWidth;
+    changeFontStyle(width);
     canvas.width =  width-5;
     canvas.height=  width*.7 ;
     setSkillTitle(width/4);
@@ -72,14 +74,19 @@ export const updateSkillLvl = (newSet) =>{
 
 const setSkillTitle = (size) => {
     context.fillStyle = '#303030';
-    context.font = "20px 'Teko', sans-serif";
+    context.font = fontStyle;
+    console.log(fontStyle);
     for(let i = 0 ; i<6 ; i++){
         const {x, y} = setTitlePoints()[i];
         context.fillText(skillTitle[i], x*size,y*size);
     }   
 }
+const changeFontStyle = (size) => {
+    if(size > 500) fontStyle = "20px 'Teko', sans-serif";
+    else fontStyle = "17px 'Teko', sans-serif";
+}
 const setTitlePoints = () => {
-    const titleBasePoints = createNewSubPoints(basePoints,[11,11,11,11,11,11]);
+    const titleBasePoints = createNewSubPoints(basePoints,[11,11,11,12,12,12]);
     const titlePoints = [];
     for(let i = 0 ; i<6 ; i++){
         let leng = skillTitle[i].length;

@@ -628,6 +628,15 @@
   cursor: pointer;
 }
 
+.my-skills .skills-demo-wrapper .skills-demo .warning {
+  color: red;
+  -webkit-animation: showAnim 1s ease-in-out;
+          animation: showAnim 1s ease-in-out;
+  font-size: 1.8rem;
+  font-family: 'Teko', sans-serif;
+  display: none;
+}
+
 .item-checked {
   border: 1px solid #303030;
   color: #72ddd1 !important;
@@ -635,12 +644,12 @@
 }
 
 @media screen and (max-width: 768px) {
-  .my-skills .skill-category__list {
+  .my-skills .skill-category-list {
     width: 100%;
   }
-  .my-skills .skill-category__list__item {
+  .my-skills .skill-category-list__item {
     letter-spacing: 0;
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
   .my-skills .skills-demo-wrapper {
     -webkit-box-orient: vertical;
@@ -653,9 +662,13 @@
   }
   .my-skills .skills-demo-wrapper .skills-demo__category-title-wrapper {
     margin-top: 5vh;
+    margin-bottom: 2vh;
+  }
+  .my-skills .skills-demo-wrapper .skills-demo__skills-list__item {
+    font-size: 1.9rem;
   }
   .my-skills .skills-demo-wrapper .skills-demo__skills-list__item--name {
-    min-width: 15%;
+    min-width: 10%;
   }
   .my-skills .skills-demo-wrapper .skills-demo__reset {
     margin-top: 5vh;
@@ -669,6 +682,28 @@
   }
   .my-skills .skills-demo-wrapper .skills-demo__skills-list__item--name {
     width: 30%;
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 1;
+    pointer-events: all;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+    pointer-events: all;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
   }
 }
 

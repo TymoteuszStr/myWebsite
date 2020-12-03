@@ -1,3 +1,4 @@
+import { warning } from "./domSelector";
 import { generateNewGraph } from "./generateNewGraph";
 import { categoryChecked, checkedCounter, skillsChecked } from "./skillsList";
 const MaxSkills = 6;
@@ -16,10 +17,22 @@ export const chooseSkills = () =>{
 
 const checkItem = ({classList},index)=>{
     const currentCategory = skillsChecked[categoryChecked];
+    const {style} = warning;
     if(checkedCounter<MaxSkills){
         classList.add(itemChecked);
         checkedCounter++;
         currentCategory.splice(index,1,1);
+    }
+    else{
+       warning.style.display="block";
+       //warning.style.animation = "fade 1s ease forwards"
+        setTimeout(()=>{
+            style.animation = "fade 1s ease forwards"
+            setTimeout(()=>{ 
+                style.animation = "showAnim 1s ease-in-out"
+                style.display = "none"
+            },1000);
+        },2000)
     }
 }
 const uncheckItem = ({classList},index)=>{
