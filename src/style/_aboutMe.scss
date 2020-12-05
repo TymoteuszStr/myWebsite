@@ -1,3 +1,4 @@
+
 .about-me{
     display: flex;
     width: 100%;
@@ -12,28 +13,6 @@
         display: flex;
         flex-direction: column;
 
-        .title{
-            display: flex;
-            justify-content: flex-start;
-            margin-top: $nav-bar-size;
-            &--bg{
-                position: absolute;
-                display: flex;
-                width: 110px;
-                height: 90px;
-                background-color: $font-color;
-                z-index: $zBehind;
-            }
-            &__text{
-                display: flex;
-                color:  $my-grey;
-                font-size: 5rem;
-                z-index: $zMid;    
-                margin-left: 20px; 
-                text-align: right; 
-                letter-spacing: 2px;
-            }
-        }
         .main-text{
             display: flex;
             color:  $my-grey;
@@ -54,6 +33,29 @@
     }
 }
 
+
+.title{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: $nav-bar-size;
+    &--bg{
+        position: absolute;
+        display: flex;
+        width: 110px;
+        height: 90px;
+        background-color: $font-color;
+        z-index: $zBehind;
+    }
+    &__text{
+        display: flex;
+        color:  $my-grey;
+        font-size: 5rem;
+        z-index: $zMid;    
+        margin-left: 20px; 
+        text-align: right; 
+        letter-spacing: 2px;
+    }
+}
 
 @media screen and (max-width:1024px){
     .about-me__photo{
