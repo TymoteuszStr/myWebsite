@@ -7,7 +7,7 @@ import {chooseCategory} from './js/chooseCategory';
 import {chooseSkills} from './js/chooseSkills'
 import { resetGrapt } from './js/generateNewGraph';
 import { upArrowClick } from './js/upArrow';
-
+import {formInfo } from './js/formInfo';
 
 const runFuncions = () =>{
     hello();
@@ -18,6 +18,7 @@ const runFuncions = () =>{
     chooseSkills();
     resetGrapt();
     upArrowClick();
+    formInfo();
 }
 
 

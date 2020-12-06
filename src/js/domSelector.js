@@ -16,3 +16,4 @@
     export const resetGraphButton = document.querySelector('.skills-demo__reset');
     export const upArrow = document.querySelector('.up-arrow');
     export const warning = document.querySelector('.warning');
+    export const btn = document.querySelector('.submit_btn');

@@ -92,7 +92,7 @@
                             <div class="skills-demo__skills-list__item"><div class="skills-demo__skills-list__item--name">JavaScript: </div><div class="skills-demo__skills-list__item--stars"><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div></div></div><div class="skills-demo__skills-list__item"><div class="skills-demo__skills-list__item--name">CSS: </div><div class="skills-demo__skills-list__item--stars"><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div></div></div><div class="skills-demo__skills-list__item"><div class="skills-demo__skills-list__item--name">HTML: </div><div class="skills-demo__skills-list__item--stars"><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div></div></div><div class="skills-demo__skills-list__item"><div class="skills-demo__skills-list__item--name">C++: </div><div class="skills-demo__skills-list__item--stars"><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div></div></div><div class="skills-demo__skills-list__item"><div class="skills-demo__skills-list__item--name">PHP: </div><div class="skills-demo__skills-list__item--stars"><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div></div></div><div class="skills-demo__skills-list__item"><div class="skills-demo__skills-list__item--name">ECMAScript: </div><div class="skills-demo__skills-list__item--stars"><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="fas fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div><div class="far fa-star"></div></div></div>
 
                         </div>
-                        <p class="warning"> <strong>Na wykresie może znajdować się maksymaninie 6 umiejętności na raz</strong></p>
+                        <p class="warning"> Na wykresie może znajdować się maksymaninie 6 umiejętności na raz</p>
 
                         <div class="skills-demo__reset">
                             <p class="skills-demo__reset--string">RESET</p>
@@ -131,7 +131,7 @@
             <div class = "form-wrapper">
                 <img class="form-bg" src="./img/bg-dots2.png">
 
-                <form action="sendMail.php" method="POST" class="contact-form" >
+                <form action="sendMail.php" method="POST" class="contact-form" onsubmit="return false" >
                     <div class = "contact-form__group">
                         <input type ="text"  id ="name" class="form-input" name="name" placeholder="Twoje imię" required>
                     </div>
@@ -139,9 +139,9 @@
                         <input type ="email"  id ="email" class="form-input" name="email" placeholder="Twój email" required>
                     </div>
                     <div class = "contact-form__group">
-                        <textarea id="message" class="form-input" rows="12" cols="50" name="message" placeholder="Wpisz wiadomość..." ></textarea>
+                        <textarea id="message" class="form-input" rows="10" cols="50" name="message" placeholder="Wpisz wiadomość..." ></textarea>
                     </div>
-                    
+                                       
                     <button type="submit" class="submit_btn">Wyślij!</button>
                 </form>
             </div>

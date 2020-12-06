@@ -1,20 +1,31 @@
 <?php
     
-echo "<pre>";
+    $message_send = false;
 
-    print_r($_POST);
-echo '</pre>';
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
+    if(isset($_POST['email']) && $_POST['email']!= ""){
 
-$myMail = "tymoteusz.strozniak@gmail.com";
-$subject = "WIADOMOŚĆ ZE MOJEJ STRONY WWW";
-$body = ""; 
+        if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
+        {
 
-$body .= "Wiadomość od: ".$name."\r\n";
-$body .= "e-mail: ".$email."\r\n";
-$body .= "Treść wiadomości: ".$name."\r\n";
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $message = $_POST['message'];
+            
+            $myMail = "tymoteusz.strozniak@gmail.com";
+            $subject = "MAIL: T.devWeb od:".$name;
+            $body = ""; 
+            
+            $body .= "Wiadomość od: ".$name."\r\n";
+            $body .= "e-mail: ".$email."\r\n";
+            $body .= "Treść wiadomości: ".$message."\r\n";
+            
+            mail($myMail,$subject,$body);
 
-mail($myMail,$subject,$body);
+            $message_send = true;
+			header("Location: http://twebdev.pl/#kontakt");
+
+        }
+	}
+    
+
 ?>
